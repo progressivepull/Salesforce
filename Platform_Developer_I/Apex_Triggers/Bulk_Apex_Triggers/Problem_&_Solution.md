@@ -22,30 +22,21 @@ Create a bulkified Apex trigger that adds a follow-up task to an opportunity if 
 
 
 # Solution
+[Bulk Apex Triggers || Apex Triggers || Salesforce Supported Virtual Internship Program 2024](https://www.youtube.com/watch?v=YEJ8v5RVKqE)
 
-``` apex
+``` apex trigger
 trigger ClosedOpportunityTrigger on Opportunity (after insert, after update) {
-    List<Task> tasksToCreate = new List<Task>();
-
-    for (Opportunity opp : Trigger.new) {
-        // Only process if StageName is 'Closed Won' AND it was not 'Closed Won' before
-        if (opp.StageName == 'Closed Won') {
-            // For after update, check that the Stage actually changed to avoid redundant tasks
-            if (Trigger.isInsert || 
-               (Trigger.isUpdate && Trigger.oldMap.get(opp.Id).StageName != 'Closed Won')) {
-
-                Task followUpTask = new Task(
-                    Subject = 'Follow Up Test Task',
-                    WhatId = opp.Id
-                );
-                tasksToCreate.add(followUpTask);
-            }
-        }
+    List<Task> taskList = new List<Task>();
+    
+     for (Opportunity opp : [SELECT id, StageName FROM Opportunity WHERE StageName = 'Closed Won' AND Id IN : Trigger.New]) {
+        taskList.add( new Task(Subject='Follow Up Test Task', WhatId = opp.Id));
+     }
+    
+    if (taskList.size() > 0 ) {
+        insert taskList;
     }
 
-    if (!tasksToCreate.isEmpty()) {
-        insert tasksToCreate;
-    }
+
 }
 
 ```
@@ -61,4 +52,7 @@ trigger ClosedOpportunityTrigger on Opportunity (after insert, after update) {
 * 🔗 Associates each task with its corresponding Opportunity using WhatId.
 
 Want to add an Owner assignment or a follow-up date? You can easily extend it with more fields like OwnerId, DueDate, or Status.
+
+# Error
+We tried to insert Opportunity records as part of the challenge check, but the insert failed. Error: thException: OPP_INSERT | System.DmlException: Insert failed. First exception on row 0; first error: REQUIRED_FIELD_MISSING, Required fields are missing: [Discount_Percent__c]: [Discount_Percent__c]
 

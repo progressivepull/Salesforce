@@ -16,6 +16,9 @@ Create a Lightning app page that uses the wire service to display the current us
 
 # Solution
 
+[Add Styles & Data to Lightning Web Component|Lightning Web Components Basics|Salesforce|Trailhead - 
+Education Matters- YouTube](https://www.youtube.com/watch?v=iPi-5oJapJI)
+
 Here's how to complete the challenge and wire up the current user's name to your Lightning App page titled **Your Bike Selection**.
 
 # ⚙️ Step 1: Create the Lightning App Page

@@ -34,6 +34,21 @@ public class ContactAndLeadSearch {
 }
 
 ```
+Debug -> Open Execute Anonymous Window
+
+
+Create a new Lead record by copy the following the window. 
+``` apex
+// Create a new Lead object
+Lead newLead = new Lead();
+// Set the Last Name field
+newLead.LastName = 'Smith';
+// Set the Company field (required for Lead records)
+newLead.Company = 'ABC Company';
+// Insert the Lead record into the database
+insert newLead; 
+```
+
 
 # 🔍 Breakdown:
 * Class Name: ContactAndLeadSearch — declared as public.

@@ -27,10 +27,12 @@ Add a checkbox field to the Account object:
 
 # Solution
 
+[Get Started with Apex Triggers || Apex Triggers || Salesforce Supported Virtual Internship 2024](https://www.youtube.com/watch?v=WoryKz-jOFo)
+
 ``` apex
 trigger AccountAddressTrigger on Account (before insert, before update) {
     for (Account acc : Trigger.new) {
-        if (acc.Match_Billing_Address__c == true) {
+        if (acc.Match_Billing_Address__c == true && acc.BillingPostalCode != null) {
             acc.ShippingPostalCode = acc.BillingPostalCode;
         }
     }
@@ -49,3 +51,11 @@ trigger AccountAddressTrigger on Account (before insert, before update) {
 * Bulkified: Uses a for loop over Trigger.new to handle many records efficiently.
 
 If you’re planning to test it, try inserting or updating a few Account records with different address combinations and toggle the checkbox. Want to add similar logic for other fields like street or city?
+
+# Error
+We updated an account that had 'Match_Billing_Address__c' set to true. We expected the trigger to fire, but it didn’t. Make sure the trigger fires if 'Match_Billing_Address__c' is true.
+
+DID But Do not think get do this: General Options -> Default Value -> Checked
+
+My apex code was not saved
+

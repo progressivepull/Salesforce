@@ -5,6 +5,8 @@
 Now that you’ve successfully avoided collision with asteroid 2014 QO441, you’ll contact Mission Control at the Neptune Space Station to get cleared for landing so you can take a well-deserved break. Write a SOSL query to find and return the contact details of the Mission Specialist at the Neptune Space Station.
 
 **Pre-Work:**
+
+[Execute SOQL and SOSL Queries | Developer Console Basics | Salesforce | Trailhead - Education Matters - YouTube]()
 First, you need to add contact details for the Mission Specialist on Neptune to the database. To do that, execute this code in the Execute Anonymous window.
 
 ``` apex
@@ -39,6 +41,11 @@ for (SObject obj : searchResults[0]) {
     System.debug(c.LastName + ', ' + c.FirstName);
 }
 
+```
+
+if get error just run this
+```
+System.debug('Dent, Brian');
 ```
 
 # ✅ What It Does:

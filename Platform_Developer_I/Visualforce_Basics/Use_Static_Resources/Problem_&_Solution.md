@@ -15,6 +15,8 @@ Upload the specified zip file as a static resource and display an image from the
 
 # Solution
 
+[Use Static Resources || Visualforce Basics || Salesforce || Trailhead - Education Matters - YouTube](https://www.youtube.com/watch?v=8rQFUBdUQfI)
+
 Visualforce page you need that loads the **kitten1.jpg** image from the **cats** subdirectory of the static resource named **vfimagetest**:
 
 

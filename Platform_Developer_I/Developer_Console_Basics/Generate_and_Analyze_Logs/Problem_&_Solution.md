@@ -5,7 +5,7 @@
 Generate a debug log, and create a custom Perspective to analyze it.
 
 * For the SFDC_DevConsole debug level, set the logging level for ApexCode to **FINEST**
-* Use the Execute Anonymous window to execute the **EmailMissionSpecialist** Apex class that you created earlier, providing your own email address
+* Use the Execute Anonymous window to execute the **EmailManager** Apex class that you created earlier, providing your own email address
 * Create a Developer Console Perspective:
     - Panels:
         - Stack Tree
@@ -18,6 +18,8 @@ Generate a debug log, and create a custom Perspective to analyze it.
 
 # Solution
 
+[Generate and Analyze Logs || Developer Console Basics - wonder studies - YouTube](https://www.youtube.com/watch?v=B9LIIbRWguk)
+
 # 🛠 Step 1: Set Apex Logging Level to FINEST
 1. In Setup, search for Debug Log or go to Debug Logs directly.
 
@@ -29,7 +31,7 @@ Generate a debug log, and create a custom Perspective to analyze it.
 
 5. Save your changes.
 
-# 🚀 Step 2: Execute the EmailMissionSpecialist Apex Class
+# 🚀 Step 2: Execute the EmailManager Apex Class
 1. Open the Developer Console.
 
 2. Go to Debug > Open Execute Anonymous Window.
@@ -37,7 +39,8 @@ Generate a debug log, and create a custom Perspective to analyze it.
 3. Enter and run:
 
 ``` apex
-EmailMissionSpecialist.sendEmail('your_email@example.com');
+EmailManager.sendMail('your_email@example.com', 'Flight Path Change',
+       'Mission control 123: Your flight path has been changed.');
 ```
 Replace your_email@example.com with your real email address.
 
@@ -63,3 +66,6 @@ Replace your_email@example.com with your real email address.
     - Execution Overview
 
 5. Save the perspective.
+
+
+

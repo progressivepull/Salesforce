@@ -32,7 +32,29 @@ Even if you're completing this module as part of the Admin Beginner trail, be su
 
 # Solution
 
+From Lesson (Must do before start below solution): Optimize Customer Data with Standard and Custom Objects
+
 You're building out a great foundation for DreamHouse Realty's offer tracking! Here's how to complete the relationships for the Offer object in Salesforce:
+
+
+## Create a Custom Object
+Follow along as D’Angelo to see how he builds the Property object. You need this object later, so don’t skip these steps!
+
+1. Scroll to the bottom of this page and create a trailhead playground. Don’t skip this step! You need to use a fresh and clean Trailhead Playground for this module.
+**Note:** Even if you're completing this module as part of the Admin Beginner trail, be sure and create a new Trailhead Playground to complete these steps. You don't need to reinstall the Dreamhouse app in the new playground org.
+2. Once your playground is created (it takes a minute!), press Launch.
+3. Click the gear icon The setup gear. at the top of the page and launch setup.
+4. Click the **Object Manager** tab.
+5. Click **Create | Custom Object **in the top-right corner.
+6. For Label, enter **Property**. Notice that the Object Name and Record Name fields auto-fill.
+7. For Plural Label, enter **Properties**.
+8. Prior to saving the custom object, scroll to the bottom of the page and select the checkbox **Launch New Custom Tab Wizard after saving this custom object**.
+9. Leave the rest of the values as default and click **Save**.
+10. On the New Custom Object Tab page, click the Tab Style field and select a style you like. The style sets the icon to display in the UI for the object.
+11. Click Next, Next, and Save.
+
+Great job! You just created your first custom object. Now, learn about adding fields to this object.
+
 
 # 🔗 Step 1: Create Master-Detail Relationship (Offer → Property)
 

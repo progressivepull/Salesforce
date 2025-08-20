@@ -29,6 +29,7 @@ Here's the updated Visualforce page code based on your instructions. Assuming th
                 <apex:inputCheckbox title="Navigation System Online" />
                 <apex:inputCheckbox title="Communications System Online" />
                 <apex:inputCheckbox title="Life Support System Online" />
+ 		<apex:commandButton value="Save Checklist" action="{!save}" />
             </apex:pageBlockSection>
         </apex:pageBlock>
     </apex:form>
@@ -41,3 +42,6 @@ Here's the updated Visualforce page code based on your instructions. Assuming th
 * Create this page as StationCheck in Setup > Visualforce Pages, and paste in the modified code.
 
 * Later, you can bind these inputs to controller logic to track each engineer’s check-in and send mission updates.
+
+ERROR:
+In the StationCheck Visualforce page, we can’t find a commandButton that saves the checklist. Make sure the commandButton tag includes action="{!save}".

@@ -21,6 +21,8 @@ Create an Apex class with a method that returns a list of formatted strings. The
 
 Here's a complete Apex class that fulfills all the criteria you've outlined:
 
+[Get Started with Apex || Apex Basics & Database](https://www.youtube.com/watch?v=JRWFhhl2_TM)
+
 ``` apex
 
 public class StringListTest {

@@ -43,6 +43,8 @@ Create a record-triggered flow that creates a task for a high-value opportunity 
 
 # Solution
 
+* [Build a Record Triggered Flow - Salesforce Trailhead - YouTube](https://www.youtube.com/watch?v=T5LoJALMTQk)
+
 # 🛠️ Step-by-Step Flow Configuration
 
 **1. Flow Setup**

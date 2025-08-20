@@ -26,8 +26,13 @@ Hint: Use the API names (**MailingPostalCode** and **Account.ShippingPostalCode*
 
 Here’s how to create the validation rule as described:
 
-**Object:** Contact
-**Rule Name:** Contact_must_be_in_Account_ZIP_Code
+1 . From Setup, go to Object Manager and click Contact.
+2. In the left sidebar, click Validation Rules.
+3. Click New.
+4. Enter the following properties for your validation rule:
+
+Rule Name: Contact_must_be_in_Account_ZIP_Code
+Error Condition Formula:
 
 Formula:
 
@@ -37,6 +42,14 @@ AND(
     MailingPostalCode <> Account.ShippingPostalCode
 )
 ```
+
+5. Error Message: Contact Mailing Zip Code must match the Account Shipping Zip Code.
+6. To check your formula for errors, click Check Syntax.
+7. Click Save to finish.
+
+
+
+
 
 ## Error Message:
 Contact Mailing Zip Code must match the Account Shipping Zip Code.
