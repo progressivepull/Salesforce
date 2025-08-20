@@ -26,6 +26,8 @@ Deploy your files to your Trailhead Playground or Developer Edition org and then
 
 # Solution
 
+#3 Deploy Lightning Web Component Files | Lightning Web Components Basics | Salesforce | Trailhead - Education Matters - YouTube](https://www.youtube.com/watch?v=CgtEL7sJ298)
+
 # ⚙️ Step 1: Create the SFDX Project
 
 In Visual Studio Code, open the Command Palette (⇧⌘P or Ctrl+Shift+P) and run:
