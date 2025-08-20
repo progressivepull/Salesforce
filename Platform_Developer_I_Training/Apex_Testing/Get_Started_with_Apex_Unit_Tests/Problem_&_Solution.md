@@ -18,17 +18,22 @@ Create a simple Apex class to test if a date is within a proper range, and if no
 
 # 📄 Apex Class: VerifyDate
 
+
 ``` apex
 public class VerifyDate {
     public static Date getValidDate(Date inputDate, Date startDate, Date endDate) {
         if (inputDate >= startDate && inputDate <= endDate) {
             return inputDate;
         } else {
-            return Date.newInstance(endDate.year(), endDate.month(), endDate.daysInMonth());
+            // Get the last day of the month for endDate
+            Integer year = endDate.year();
+            Integer month = endDate.month();
+            Date firstDayNextMonth = Date.newInstance(year, month, 1).addMonths(1);
+            Date lastDayOfMonth = firstDayNextMonth.addDays(-1);
+            return lastDayOfMonth;
         }
     }
 }
-
 ```
 This method checks whether inputDate is within the range defined by startDate and endDate. If it’s outside the range, it returns the last day of the endDate's month.
 
@@ -41,9 +46,9 @@ public class TestVerifyDate {
     static void testDateWithinRange() {
         Date input = Date.newInstance(2024, 5, 15);
         Date start = Date.newInstance(2024, 5, 1);
-        Date end = Date.newInstance(2024, 5, 31);
+        Date endDate = Date.newInstance(2024, 5, 31);
 
-        Date result = VerifyDate.getValidDate(input, start, end);
+        Date result = VerifyDate.getValidDate(input, start, endDate);
         System.assertEquals(input, result);
     }
 
@@ -51,9 +56,9 @@ public class TestVerifyDate {
     static void testDateOutsideRangeBefore() {
         Date input = Date.newInstance(2024, 4, 30);
         Date start = Date.newInstance(2024, 5, 1);
-        Date end = Date.newInstance(2024, 5, 31);
+        Date endDate = Date.newInstance(2024, 5, 31);
 
-        Date result = VerifyDate.getValidDate(input, start, end);
+        Date result = VerifyDate.getValidDate(input, start, endDate);
         System.assertEquals(Date.newInstance(2024, 5, 31), result);
     }
 
@@ -61,9 +66,9 @@ public class TestVerifyDate {
     static void testDateOutsideRangeAfter() {
         Date input = Date.newInstance(2024, 6, 1);
         Date start = Date.newInstance(2024, 5, 1);
-        Date end = Date.newInstance(2024, 5, 31);
+        Date endDate = Date.newInstance(2024, 5, 31);
 
-        Date result = VerifyDate.getValidDate(input, start, end);
+        Date result = VerifyDate.getValidDate(input, start, endDate);
         System.assertEquals(Date.newInstance(2024, 5, 31), result);
     }
 }
