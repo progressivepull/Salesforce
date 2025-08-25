@@ -50,6 +50,17 @@ public with sharing class WarehouseCalloutService implements Queueable {
     public static void execute (QueueableContext context){
         runWarehouseEquipmentSync();
     }
+ 
+}
+
+----------------------------------------------------------------
+
+ 
+
+After saving the code open execute anonymous window ( CTRl+E ) and run this method ,
+-------------------------------------------
+
+System.enqueueJob(new WarehouseCalloutService());
 
 
 
