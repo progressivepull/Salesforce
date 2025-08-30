@@ -2,7 +2,7 @@
 | Google Vertex | Platform Foundations   | Admin   | Mulesoft Assoc.   | Mulesoft Developer I   | Mulesoft Developer II   | Platform App Builder   | Platform Developer I   | Admin Advanced   | Agentforce Champion   | Agentforce Innovator   | Agentforce Legend   | Consultant   | Omni Studio Consultant   | Omni Studio Developer   | Experience Cloud Consultant   |
 |---------------|---------------------------|-----------|----------------------|---------------------------|----------------------------|---------------------------|---------------------------|---------------------|---------------------------|----------------------------|------------------------|----------------|-----------------------------|----------------------------|----------------------------------|
 |               |                           |           |                      |                           |                            |                           |                           |                     |                           |                            |                        |                |                             |                            |                                  |
-
+```
 	** Focus Areas:	The focused required path is below																
 	--> Platform Foundations	https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-certified-associate-credential																
 	--> Admin 	 https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-administrator-credential																
@@ -17,12 +17,16 @@
 																		
 	LEVEL 2: :	After hands-on experience is acquired, we should pursue the level 2 paths. Level 2 will be required at a later date																
 	--> Omni Studio Consultant 																	
-	--> Omni Studio Developer 	
+	--> Omni Studio Developer
+
+```
+ 	
 
  | Associate | Admin Beginner | Admin Intermediate | Platform Developer Beginner | Platform App Builder | Admin Advanced | Omni Studio Consultant | Omni Studio Developer | Experience Cloud Consultant |
 |-----------|----------------|---------------------|------------------------------|-----------------------|----------------|-------------------------|------------------------|------------------------------|
 |           |                |                     |                              |                       |                |                         |                        |                              |
 
+```
 	** Focus Areas:	The focused required path is below								
 --> Associate	https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-certified-associate-credential								
 --> Admin 	 https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-administrator-credential								
@@ -33,7 +37,8 @@
 LEVEL 2: :	After hands-on experience is acquired, we should pursue the level 2 paths. Level 2 will be required at a later date								
 --> Omni Studio Consultant 									
 --> Omni Studio Developer 									
---> Experience Cloud Consultant 
+--> Experience Cloud Consultant
+```
 
 # References
 * [Introduction to Vertex AI Studio | Google Cloud Skills Boost](https://www.cloudskillsboost.google/course_templates/552)
